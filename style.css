@@ -537,6 +537,7 @@ h1, h2, h3, h4, h5, h6, a, button {
 .container.cards.golden {
     margin: 50px auto;
     padding: 0 20px;
+    display: block;
 }
 
 .container.rarities {
@@ -619,6 +620,13 @@ h1, h2, h3, h4, h5, h6, a, button {
     background: linear-gradient(to right, #e4c568, #c2932c) border-box;
     box-shadow: 0 0 30px lightcoral;
     width: 50%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .route-info.golden {
+        width: 100%;
+    }
 }
 
 .route-info p {
