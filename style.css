@@ -419,7 +419,6 @@ h1, h2, h3, h4, h5, h6, a, button {
     margin: 50px auto;
     padding: 50px;
     gap: 50px;
-    border: 1px solid black;
     border-radius: 10px;
 }
 
@@ -494,7 +493,6 @@ h1, h2, h3, h4, h5, h6, a, button {
 }
 
 .assigned-officer-img {
-    height: 100%;
     width: 100%;
     border-radius: 5px;
     border: 1px solid black;
