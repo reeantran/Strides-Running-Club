@@ -423,21 +423,22 @@ h1, h2, h3, h4, h5, h6, a, button {
 }
 
 .tab {
-    background-color: #e0e0e0;
-    border: none;
+    background: #42B9B3;
+    border: 1px solid black;
     padding: 12px 0;
     font-size: 1.1em;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.25s;
+    transition: 0.65s;
+    color: white;
 }
 
 .tab:hover {
-    background-color: #d0d0d0;
+    background-color: #1C847B;
 }
 
 .tab.active {
-    background-color: #005fa3;
+    background-color: #1C847B;
     color: white;
 }
 
@@ -463,7 +464,7 @@ h1, h2, h3, h4, h5, h6, a, button {
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 50px 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px gray;
     animation: fadeIn 0.3s ease;
 }
 
@@ -505,8 +506,8 @@ h1, h2, h3, h4, h5, h6, a, button {
     text-align: center;
 }
 
-.assignments h3 {
-    grid-column: 1 / -1; /* Makes header span full width */
+.assignments h2 {
+    grid-column: 1 / -1;
 }
 
 @keyframes fadeIn {
