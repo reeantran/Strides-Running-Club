@@ -1,0 +1,44 @@
+{
+  "rewrites": [
+    {
+      "source": "/cards",
+      "destination": "/cards.html"
+    },
+    {
+      "source": "/common-cards",
+      "destination": "/common-cards.html"
+    },
+    {
+      "source": "/epic-cards",
+      "destination": "/epic-cards.html"
+    },
+    {
+      "source": "/golden-card",
+      "destination": "/golden-card.html"
+    },
+    {
+      "source": "/index",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/legendary-cards",
+      "destination": "/legendary-cards.html"
+    },
+    {
+      "source": "/officers",
+      "destination": "/officers.html"
+    },
+    {
+      "source": "/rare-cards",
+      "destination": "/rare-cards.html"
+    },
+    {
+      "source": "/schedule",
+      "destination": "/schedule.html"
+    },
+    {
+      "source": "/uncommon-cards",
+      "destination": "/uncommon-cards.html"
+    }
+  ]
+}
