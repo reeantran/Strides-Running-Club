@@ -639,7 +639,13 @@ h1, h2, h3, h4, h5, h6, a, button {
     overflow-y: auto;
     height: 100%;
     box-sizing: border-box;
-    font-size: 0.75rem;
+    font-size: clamp(16px, 1vw, 20px);
+}
+
+@media (min-width: 860px) {
+    .route-info p {
+        font-size: clamp(8px, 10px, 13px);
+    }
 }
 
 .route-info figcaption {
