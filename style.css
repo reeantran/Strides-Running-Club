@@ -37,6 +37,23 @@ h1, h2, h3, h4, h5, h6, a {
     animation: slideUp 0.65s ease-out forwards;
 }
 
+.welcome {
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding: 50px 50px;
+    gap: 50px;
+    line-height: 2;
+    background-color: white;
+    border-bottom: 1px dashed black;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.65s ease-out forwards;
+}
+
 @keyframes slideUp {
     to {
         opacity: 1;
@@ -342,24 +359,6 @@ h1, h2, h3, h4, h5, h6, a {
 
 /* --- Officer Page Classes --- */
 
-.officer-welcome {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: left;
-    justify-self: center;
-    margin: 0 auto;
-    height: 30vh;
-    width: 100%;
-    max-width: 1300px;
-    padding: 150px 80px;
-    border-bottom: 1px dashed black;
-    line-height: 1.5;
-    background-color: white;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUp 0.65s ease-out forwards;
-}
-
 .container.officer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -412,23 +411,6 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 /* --- Schedule Page Classes --- */
-
-.schedule-welcome {
-    display: grid;
-    align-items: center;
-    justify-self: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1300px;
-    padding: 50px 50px;
-    gap: 50px;
-    line-height: 2;
-    background-color: white;
-    border-bottom: 1px dashed black;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUp 0.65s ease-out forwards;
-}
 
 .container.schedule {
     display: grid;
@@ -535,28 +517,6 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 /* --- Card Classes --- */
-
-.card-welcome {
-    display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    align-items: center;
-    justify-self: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1300px;
-    padding: 50px 50px;
-    gap: 50px 0px;
-    line-height: 2;
-    background-color: white;
-    border-bottom: 1px dashed black;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUp 0.65s ease-out forwards;
-}
-
-.card-welcome.rarities {
-    grid-template-columns: auto;
-}
 
 .card-welcome h1 {
     font-size: clamp(2rem, 4vw, 3rem);
@@ -761,17 +721,6 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 @media screen and (max-width: 767px) {
-    .card-welcome {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        margin: 0 auto;
-        min-height: 10vh;
-        width: 100%;
-        max-width: 1300px;
-        line-height: 2;
-    }
 
     .container.cards {
         display: grid;
