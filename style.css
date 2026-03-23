@@ -19,7 +19,7 @@ html {
     font-family: 'Quicksand', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6, a, button {
     font-family: 'Sailors', sans-serif;
     font-weight: normal;
 }
@@ -32,6 +32,33 @@ h1, h2, h3, h4, h5, h6, a {
     justify-content: center;
     background-color: white;
     padding: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.65s ease-out forwards;
+}
+
+.welcome {
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding: 50px 50px;
+    gap: 50px;
+    line-height: 2;
+    background-color: white;
+    border-bottom: 1px dashed black;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.65s ease-out forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Navigation Bar */
@@ -332,24 +359,9 @@ h1, h2, h3, h4, h5, h6, a {
 
 /* --- Officer Page Classes --- */
 
-.officer-welcome {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: left;
-    justify-self: center;
-    margin: 0 auto;
-    height: 30vh;
-    width: 100%;
-    max-width: 1300px;
-    padding: 150px 80px;
-    border-bottom: 1px dashed black;
-    line-height: 1.5;
-    background-color: white;
-}
-
 .container.officer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin: 50px auto;
 }
 
@@ -367,65 +379,38 @@ h1, h2, h3, h4, h5, h6, a {
 
 .officer-card h1 {
     padding: 15px;
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+    line-height: 1.1;
+    word-break: break-word;
 }
 
 .officer-card h3 {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 .officer-card.principal {
     border: 4px solid #b3e0dc;
 }
 
-#officer-img {
-    height: 100%;
+.officer-img {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
     width: 100%;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-    .officer-welcome {
-        grid-template-columns: auto;
-    }
-
-    .officer-card {
-        padding: 10px;
-    }
-
-    .container.officer {
-        grid-template-columns: 1fr 1fr 1fr;
-        height: auto;
-        padding: 0px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .officer-welcome {
-        grid-template-columns: auto;
-    }
-
-    .container.officer {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-        padding: 0px;
-    }
+.officer-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* --- Schedule Page Classes --- */
-
-.schedule-welcome {
-    display: grid;
-    align-items: center;
-    justify-self: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1300px;
-    padding: 50px 50px;
-    gap: 50px;
-    line-height: 2;
-    background-color: white;
-    border-bottom: 1px dashed black;
-}
 
 .container.schedule {
     display: grid;
@@ -434,26 +419,26 @@ h1, h2, h3, h4, h5, h6, a {
     margin: 50px auto;
     padding: 50px;
     gap: 50px;
-    border: 1px solid black;
     border-radius: 10px;
 }
 
 .tab {
-    background-color: #e0e0e0;
-    border: none;
+    background: #42B9B3;
+    border: 1px solid black;
     padding: 12px 0;
     font-size: 1.1em;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.25s;
+    transition: 0.65s;
+    color: white;
 }
 
 .tab:hover {
-    background-color: #d0d0d0;
+    background-color: #1C847B;
 }
 
 .tab.active {
-    background-color: #005fa3;
+    background-color: #1C847B;
     color: white;
 }
 
@@ -462,10 +447,10 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 .day-tabs {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  width: 100%;
 }
 
 .day-tabs .tab {
@@ -478,10 +463,9 @@ h1, h2, h3, h4, h5, h6, a {
     grid-column: 1 / -1;
     background-color: #f9f9f9;
     border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 30px;
+    box-shadow: 0 4px 20px gray;
     animation: fadeIn 0.3s ease;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .day-content h2 {
@@ -502,15 +486,14 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 .mileage-groups {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-    text-align: center;
-    padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  text-align: center;
+  padding-top: 15px;
 }
 
-#assigned-officer-img {
-    height: 100%;
+.assigned-officer-img {
     width: 100%;
     border-radius: 5px;
     border: 1px solid black;
@@ -523,8 +506,8 @@ h1, h2, h3, h4, h5, h6, a {
     text-align: center;
 }
 
-.assignments h3 {
-    grid-column: 1 / -1; /* Makes header span full width */
+.assignments h2 {
+    grid-column: 1 / -1;
 }
 
 @keyframes fadeIn {
@@ -532,80 +515,35 @@ h1, h2, h3, h4, h5, h6, a {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-    .day-tabs {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-      width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .day-tabs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      width: 100%;
-    }
-
-    .mileage-groups {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        text-align: center;
-        padding-top: 15px;
-    }
-}
-
 /* --- Card Classes --- */
 
-.card-welcome {
-    display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    align-items: center;
-    justify-self: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1300px;
-    padding: 50px 50px;
-    gap: 50px;
-    line-height: 2;
-    background-color: white;
-    border-bottom: 1px dashed black;
-}
-
-.card-welcome.rarities {
-    grid-template-columns: auto;
-}
-
 .card-welcome h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
 }
 
 .card-welcome h2 {
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
     text-align: center;
 }
 
 .container.cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
     margin: 50px auto;
+    padding: 0 20px;
     gap: 50px;
 }
 
 .container.cards.golden {
-    display: grid;
-    grid-template-columns: 1fr;
     margin: 50px auto;
-    gap: 50px;
+    padding: 0 20px;
+    display: block;
 }
 
 .container.rarities {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     margin: 50px auto;
     gap: 50px;
 }
@@ -683,18 +621,24 @@ h1, h2, h3, h4, h5, h6, a {
     background: linear-gradient(to right, #e4c568, #c2932c) border-box;
     box-shadow: 0 0 30px lightcoral;
     width: 50%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .route-info.golden {
+        width: 100%;
+    }
 }
 
 .route-info p {
     line-height: 1.5;
-    padding: 15px;
+    padding: 8px;
     border: 8px solid white;
     border-radius: 20px;
-    font-size: 0.9rem;
     overflow-y: auto;
     height: 100%;
     box-sizing: border-box;
-    font-size: 0.75rem;
+    font-size: 10px;
 }
 
 .route-info figcaption {
@@ -753,124 +697,6 @@ h1, h2, h3, h4, h5, h6, a {
 .card-group.golden {
     background: linear-gradient(to right, #e4c568, #c2932c) border-box;
     box-shadow: 0 0 30px lightcoral;
-}
-
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-
-    .route-info {
-        display: grid;
-        grid-template-columns: 1fr 0.8fr;
-    }
-
-    .card-welcome h1 {
-        font-size: 2.5rem;
-        text-align: center;
-    }
-
-    .card-welcome h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .route-info p {
-        font-size: 1vw;
-        min-height: 100%;
-        border: 6px solid white;
-    }
-
-    .route-info figcaption {
-        font-size: 1vw;
-    }
-
-    .map {
-        border: 6px solid white;
-    }
-
-    .nomap {
-        border: 6px solid white;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .card-welcome {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        margin: 0 auto;
-        min-height: 10vh;
-        width: 100%;
-        max-width: 1300px;
-        line-height: 2;
-    }
-
-    .card-welcome h1 {
-        font-size: 2.5rem;
-        text-align: center;
-    }
-
-    .card-welcome h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .container.cards {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1300px;
-        padding: 40px 30px;
-        gap: 50px;
-        margin-bottom: 30px;
-    }
-
-    .container.cards h1 {
-        font-size: 1.5rem;
-    }
-
-    .route-info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-self: center;
-        margin: 0 auto;
-        width: 100%;
-        border-radius: 20px;
-        padding: 10px;
-        gap: 10px;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .route-info p {
-        font-size: 2.5vw;
-        border: 4px solid white;
-        padding: 15px;
-        line-height: 1.25;
-    }
-
-    .route-info figcaption {
-        font-size: 2vw;
-    }
-
-    .map {
-        border: 4px solid white;
-    }
-
-    .nomap {
-        border: 4px solid white;
-    }
-
-    .container.rarities {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 50px auto;
-        gap: 50px;
-    }
 }
 
 /* --- Footer Classes -- */
