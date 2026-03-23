@@ -53,6 +53,10 @@ h1, h2, h3, h4, h5, h6, a, button {
     animation: slideUp 0.65s ease-out forwards;
 }
 
+.welcome h1 {
+    font-size: 2rem;
+}
+
 @keyframes slideUp {
     to {
         opacity: 1;
@@ -514,16 +518,6 @@ h1, h2, h3, h4, h5, h6, a, button {
 
 /* --- Card Classes --- */
 
-.card-welcome h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    text-align: center;
-}
-
-.card-welcome h2 {
-    font-size: clamp(1.25rem, 2.5vw, 2rem);
-    text-align: center;
-}
-
 .container.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
@@ -532,10 +526,20 @@ h1, h2, h3, h4, h5, h6, a, button {
     gap: 30px;
 }
 
+.container.card-blurb {
+    display: block;
+    line-height: 1.5rem;
+    padding: 30px 50px;
+}
+
+.container.card-blurb h2 {
+    margin: 0.75rem 0px;
+}
+
 .container.rarities {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    margin: 50px auto;
+    margin: 20px auto;
     gap: 30px;
 }
 
@@ -622,7 +626,7 @@ h1, h2, h3, h4, h5, h6, a, button {
 
 .route-info p {
     line-height: 1.5;
-    padding: 8px;
+    padding: 0.75rem;
     border: 3px solid white;
     border-radius: 20px;
     overflow-y: auto;
