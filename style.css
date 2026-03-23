@@ -551,9 +551,12 @@ h1, h2, h3, h4, h5, h6, a, button {
 .map {
     width: 100%;
     height: auto;
-    border: 8px solid white;
     border-radius: 20px;
     margin-top: 10px;
+}
+
+.map:hover {
+    border: 5px solid #1C847B;
 }
 
 .nomap {
@@ -585,10 +588,6 @@ h1, h2, h3, h4, h5, h6, a, button {
     .container.cards {
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     }
-
-    /* .route-info {
-        width: 90%;
-    } */
 }
 
 .route-info > div:last-child {
