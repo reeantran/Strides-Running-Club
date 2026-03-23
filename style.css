@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6, a, button {
 }
 
 .officer-img {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
     width: 100%;
 }
@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6, a, button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    object-position: center top;
 }
 
 /* --- Schedule Page Classes --- */
