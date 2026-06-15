@@ -36,56 +36,6 @@ const officerImages = {
   "Amara": "images/officers/amara_maw.avif"
 };
 
-/*
-async function loadSchedule() {
-  const res = await fetch(SHEET_URL);
-  const data = await res.json();
-  renderSchedule(data);
-}
-
-function renderSchedule(data) {
-  const days = ["monday","tuesday","wednesday","thursday","friday","saturday"];
-
-  days.forEach(day => {
-    const container = document.querySelector(`#${day} .mileage-groups`);
-    container.innerHTML = "";
-
-    const dayData = data.filter(
-      item => item.Day.toLowerCase() === day
-    );
-
-    dayData.forEach(run => {
-      const frontImg = officerImages[run.Front] || "images/officers/default.avif";
-      const backImg = officerImages[run.Back] || "images/officers/default.avif";
-
-      const block = document.createElement("div");
-      block.className = "assignments";
-
-      block.innerHTML = `
-        <h2>${run.Group}</h2>
-        <h3>${run.Distance}</h3>
-        <div class="split-front-back">
-          <figure>
-            <h4>${run.Front}</h4>
-            <img src="${frontImg}" class="assigned-officer-img">
-            <h4>Front</h4>
-          </figure>
-          <figure>
-            <h4>${run.Back || "N/A"}</h4>
-            <img src="${backImg}" class="assigned-officer-img">
-            <h4>Back</h4>
-          </figure>
-        </div>
-      `;
-
-      container.appendChild(block);
-    });
-  });
-}
-
-loadSchedule();
-*/
-
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar-menu')
 

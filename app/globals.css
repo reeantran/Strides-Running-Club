@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Custom fonts ── */
+@font-face {
+  font-family: 'Sailors';
+  src: url('/fonts/sailors-webfont.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* ── Base resets ── */
+@layer base {
+  html {
+    font-size: clamp(14px, 1vw, 18px);
+  }
+
+  * {
+    @apply box-border font-quicksand;
+  }
+
+  h1, h2, h3, h4, h5, h6, a, button {
+    @apply font-sailors font-normal;
+  }
+}
+
+/* ── Golden gradient (can't be done purely in Tailwind) ── */
+@layer utilities {
+  .bg-golden-gradient {
+    background: linear-gradient(to right, #e4c568, #c2932c);
+  }
+
+  /* Rarity glow borders on cards */
+  .border-golden-gradient {
+    border-image: linear-gradient(to right, #e4c568, #c2932c) 1;
+  }
+
+  /* Initial hidden state for slide-up animation */
+  .animate-slide-up {
+    opacity: 0;
+  }
+}
