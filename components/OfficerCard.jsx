@@ -3,13 +3,13 @@ import Image from 'next/image';
 /**
  * OfficerCard
  *
- * @param {object} props
- * @param {string}  props.name      - Officer's first name (used for image lookup)
- * @param {string}  props.role      - Officer's role/title
- * @param {string}  props.imageSrc  - Path to officer photo
- * @param {boolean} props.principal - Whether this is a principal officer (styled border)
+ * @param {object}  props
+ * @param {string}  props.name          - Officer's first name
+ * @param {string}  props.favoriteRoute - Officer's favorite route
+ * @param {string}  props.imageSrc      - Path to officer photo
+ * @param {boolean} props.principal     - Applies teal border variant
  */
-export default function OfficerCard({ name, role, imageSrc, principal = false }) {
+export default function OfficerCard({ name, favoriteRoute, imageSrc, principal = false }) {
   return (
     <div
       className={`
@@ -35,10 +35,10 @@ export default function OfficerCard({ name, role, imageSrc, principal = false })
         {name}
       </h1>
 
-      {/* Role */}
+      {/* Favorite route */}
       <h3 className="px-[10px] pb-[10px] text-center font-sailors leading-[1.2] break-all
                      text-[clamp(0.95rem,1.8vw,1rem)]">
-        {role}
+        {favoriteRoute}
       </h3>
     </div>
   );
