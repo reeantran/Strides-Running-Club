@@ -13,7 +13,7 @@ export default function OfficerCard({ name, favoriteRoute, imageSrc, principal =
   return (
     <div
       className={`
-        rounded-[10px] mx-[30px] my-[30px] flex flex-col items-center justify-self-center
+        rounded-[10px] mx-4 px-4 my-4 flex flex-col items-center justify-self-center
         bg-officer-card shadow-officer overflow-hidden relative
         border-4 ${principal ? 'border-officer-border' : 'border-white'}
       `}
@@ -30,14 +30,14 @@ export default function OfficerCard({ name, favoriteRoute, imageSrc, principal =
       </div>
 
       {/* Name */}
-      <h1 className="py-3 text-center font-sailors leading-[1.1] break-words
-                     text-[clamp(1.2rem,2.5vw,1.75rem)]">
+      <h1 className="py-4 text-center font-sailors leading-[1.1]
+                     text-[2.75rem] md:text-[1.5rem]">
         {name}
       </h1>
 
       {/* Favorite route */}
-      <h3 className="pb-2 text-center font-sailors leading-[1.2] break-all
-                     text-[clamp(0.95rem,1.8vw,1rem)]">
+      <h3 className="pb-3 text-center font-sailors leading-[1.2]
+                     text-[2.5rem] md:text-[1rem]">
         {favoriteRoute}
       </h3>
     </div>

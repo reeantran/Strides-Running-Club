@@ -21,7 +21,7 @@ export default function RouteCard({
   const isGolden = rarity === 'golden';
 
   return (
-    <div className={isGolden ? 'md:max-w-[900px] md:mx-auto w-full' : 'w-full'}>
+    <div className={isGolden ? 'px-4 md:max-w-[900px] md:mx-auto' : 'px-4 w-full'}>
       <div
         className={`rounded-[20px] p-2.5 text-white font-bold ${colorClasses}`}
       >

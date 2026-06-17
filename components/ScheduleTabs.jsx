@@ -60,7 +60,7 @@ function DayContent({ day }) {
   return (
     <div
       className="
-        rounded-[8px] px-[30px] py-[50px]
+        rounded-[8px] px-4 py-[50px]
         shadow-[0_4px_20px_gray] bg-[#f9f9f9]
         animate-fade-in
       "
@@ -88,7 +88,7 @@ export default function ScheduleTabs({ scheduleData }) {
   }, []);
 
   return (
-    <div className="max-w-content w-full mx-auto my-[50px] px-[50px] flex flex-col gap-[50px]">
+    <div className="max-w-content w-full mx-auto my-[50px] px-4 flex flex-col gap-[50px]">
 
       {/* Day tab buttons */}
       <div

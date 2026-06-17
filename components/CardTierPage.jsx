@@ -16,7 +16,7 @@ export default function CardTierPage({ rarity, heading, cards, blurb }) {
 
       <div
         className="
-          max-w-content w-full mx-auto my-[50px] px-4
+          max-w-content w-full mx-auto my-[50px] px-2.5
           grid gap-[30px]
           opacity-0 animate-slide-up
         "
