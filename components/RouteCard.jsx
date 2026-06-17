@@ -25,7 +25,7 @@ export default function RouteCard({
       <div
         className={`rounded-[20px] p-2.5 text-white font-bold ${colorClasses}`}
       >
-        <div className="grid md:grid-cols-[1fr_1fr] gap-[10px]">
+        <div className="grid grid-cols-2 gap-[10px]">
 
           {/* LEFT SIDE - Card Art */}
           <div>
@@ -38,7 +38,7 @@ export default function RouteCard({
             />
             {/* Art Credit */}
             {artCredit && (
-              <figcaption className="py-1 text-center text-[0.6rem]">
+              <figcaption className="pt-2 text-center text-[.7rem]">
                 {artCredit}
               </figcaption>
             )}
@@ -74,7 +74,7 @@ export default function RouteCard({
             <div>
                 {/* Description */}
                 <div className="border-t-[2px] border-white p-2 flex-1">
-                  <p className="leading-snug text-[0.75rem] md:text-[0.6rem] text-center">
+                  <p className="leading-snug text-[0.8rem] md:text-[0.65rem] text-center">
                     {description}
                   </p>
                 </div>

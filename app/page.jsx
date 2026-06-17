@@ -35,27 +35,9 @@ export default function HomePage() {
       >
         {/* Left: headline + CTA */}
         <div className="flex flex-col justify-center md:text-left text-center">
-          <h1 className="font-sailors text-[2.5rem] md:text-[4rem] mb-6 leading-none">
+          <h1 className="font-sailors text-[2.75rem] md:text-[4rem] leading-[1.3]">
             Strides<br />Running<br />Club
           </h1>
-
-          <a href="#about-us" className="self-center md:self-start">
-            <button
-              className="
-                relative text-[1rem] bg-teal px-[30px] py-[15px] border-none
-                rounded-[5px] text-white mt-8 cursor-pointer overflow-hidden
-                transition-colors duration-300
-                after:content-[''] after:absolute after:top-0 after:left-0
-                after:w-0 after:h-full after:bg-teal-light after:transition-all
-                after:duration-300 after:rounded-[5px]
-                hover:after:w-full
-              "
-            >
-              <span className="relative z-10 font-sailors text-white no-underline">
-                About Us
-              </span>
-            </button>
-          </a>
         </div>
 
         {/* Right: hero image*/}

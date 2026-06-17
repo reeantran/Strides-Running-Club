@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const NAV_LINKS = [
-  { label: 'Cards',    href: '/cards' },
+  { label: 'Cards', href: '/cards' },
   { label: 'Officers', href: '/officers' },
   { label: 'Schedule', href: '/schedule' },
 ];
@@ -14,33 +14,44 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-[999] bg-white h-20 flex justify-center items-center text-[1.2rem]">
-      {/* Inner container — px-[30px] matches page content padding */}
-      <div className="max-w-content w-full flex justify-between items-center h-20 mx-auto px-[30px]">
+    <nav className="sticky top-0 z-[999] bg-white flex justify-center">
+      <div className="max-w-content w-full flex justify-between items-center mx-auto px-[30px] py-4">
 
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center no-underline text-black text-[2rem] font-sailors cursor-pointer"
+          className="flex items-center gap-2 no-underline text-black text-[2rem] font-sailors"
         >
           <Image
             src="/images/logos/strides-logo.png"
             alt="Strides Logo"
             width={70}
             height={70}
-            className="m-[5px] max-h-[70px] w-auto"
+            className="max-h-[70px] w-auto"
           />
           at UCSD
         </Link>
 
-        {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center list-none text-center h-20">
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex items-center gap-4">
           {NAV_LINKS.map(({ label, href }) => (
-            <li key={href} className="h-20">
+            <li key={href}>
               <Link
                 href={href}
-                className="text-black no-underline flex items-center justify-center px-4 h-full
-                           hover:scale-110 transition-transform duration-500 font-sailors"
+                className="
+                  text-black
+                  no-underline
+                  flex
+                  items-center
+                  justify-center
+                  px-4
+                  py-4
+                  font-sailors
+                  hover:scale-110
+                  transition-transform
+                  duration-500
+                  text-[1.25rem]
+                "
               >
                 {label}
               </Link>
@@ -48,7 +59,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Hamburger button (mobile) */}
+        {/* Hamburger */}
         <button
           onClick={() => setMenuOpen(prev => !prev)}
           className="md:hidden bg-transparent border-none cursor-pointer p-2"
@@ -64,22 +75,46 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown — auto height, no fixed 50vh */}
+      {/* Mobile Dropdown */}
       <ul
         className={`
-          md:hidden absolute w-full bg-white list-none text-center z-[99]
-          transition-all duration-500 text-[1.6rem]
-          ${menuOpen
-            ? 'top-full opacity-100 pointer-events-auto'
-            : 'top-[-1000px] opacity-0 pointer-events-none'}
+          md:hidden
+          absolute
+          top-full
+          left-0
+          w-full
+          bg-white
+          list-none
+          text-center
+          z-[99]
+          text-[1.6rem]
+          transition-all
+          duration-500
+          ${
+            menuOpen
+              ? 'opacity-100 pointer-events-auto'
+              : 'opacity-0 pointer-events-none'
+          }
         `}
       >
         {NAV_LINKS.map(({ label, href }) => (
-          <li key={href} className="w-full border-b border-gray-100 last:border-0">
+          <li
+            key={href}
+            className="w-full border-b border-gray-100 last:border-0"
+          >
             <Link
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="text-black no-underline w-full flex items-center justify-center py-5 font-sailors"
+              className="
+                text-black
+                no-underline
+                w-full
+                flex
+                items-center
+                justify-center
+                py-6
+                font-sailors
+              "
             >
               {label}
             </Link>
