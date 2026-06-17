@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 const ABOUT_SECTIONS = [
   {
@@ -26,21 +25,19 @@ export default function HomePage() {
       {/* ── Hero ── */}
       <section
         className="
-          max-w-content w-full mx-auto px-4
+          max-w-content w-full mx-auto px-[30px]
           my-[30px] md:my-[50px]
           grid grid-cols-1 md:grid-cols-[1fr_2fr]
           min-h-[50vh] md:min-h-[90vh]
           opacity-0 translate-y-[50px] animate-slide-up
         "
       >
-        {/* Left: headline + CTA */}
         <div className="flex flex-col justify-center md:text-left text-center">
           <h1 className="font-sailors text-[2.75rem] md:text-[4rem] leading-[1.3]">
             Strides<br />Running<br />Club
           </h1>
         </div>
 
-        {/* Right: hero image*/}
         <div className="mt-8 md:mt-0 flex items-center">
           <Image
             src="/images/strides-group.jpg"
@@ -57,7 +54,7 @@ export default function HomePage() {
       <section
         id="about-us"
         className="
-          max-w-content w-full mx-auto my-[30px] px-4
+          max-w-content w-full mx-auto my-[30px] px-[30px]
           grid grid-cols-1 sm:grid-cols-2
           opacity-0 translate-y-[50px] animate-slide-up
         "
@@ -65,10 +62,10 @@ export default function HomePage() {
       >
         {ABOUT_SECTIONS.map(({ heading, text }) => (
           <div key={heading}>
-            <h2 className="font-sailors text-[2rem] text-center py-5 px-2">
+            <h2 className="font-sailors text-[2rem] text-center py-5 px-[30px]">
               {heading}
             </h2>
-            <p className="text-[1rem] px-10 leading-[1.35] tracking-wide">
+            <p className="text-[1rem] px-[30px] leading-[1.35] tracking-wide">
               {text}
             </p>
           </div>

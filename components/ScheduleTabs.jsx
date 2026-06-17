@@ -7,7 +7,7 @@ import { officers } from '@/data/officers';
 const DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 
 const DAY_MAP = {
-  0: 'monday',   // Sunday → show Monday
+  0: 'monday',
   1: 'monday',
   2: 'tuesday',
   3: 'wednesday',
@@ -16,10 +16,7 @@ const DAY_MAP = {
   6: 'saturday',
 };
 
-// --- Sub-components ---
-
 function OfficerSlot({ name, position }) {
-  // Build image lookup from officers data — single source of truth
   const imageMap = useMemo(
     () => Object.fromEntries(officers.map((o) => [o.name, o.imageSrc])),
     []
@@ -60,7 +57,7 @@ function DayContent({ day }) {
   return (
     <div
       className="
-        rounded-[8px] px-4 py-[50px]
+        rounded-[8px] px-[30px] py-[50px]
         shadow-[0_4px_20px_gray] bg-[#f9f9f9]
         animate-fade-in
       "
@@ -77,8 +74,6 @@ function DayContent({ day }) {
   );
 }
 
-// --- Main component ---
-
 export default function ScheduleTabs({ scheduleData }) {
   const [activeDay, setActiveDay] = useState('monday');
 
@@ -88,9 +83,7 @@ export default function ScheduleTabs({ scheduleData }) {
   }, []);
 
   return (
-    <div className="max-w-content w-full mx-auto my-[50px] px-4 flex flex-col gap-[50px]">
-
-      {/* Day tab buttons */}
+    <div className="max-w-content w-full mx-auto my-[50px] px-[30px] flex flex-col gap-[50px]">
       <div
         className="grid gap-[10px]"
         style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))' }}
@@ -118,7 +111,6 @@ export default function ScheduleTabs({ scheduleData }) {
         })}
       </div>
 
-      {/* Active day panel */}
       {scheduleData[activeDay] && (
         <DayContent key={activeDay} day={scheduleData[activeDay]} />
       )}
