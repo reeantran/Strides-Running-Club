@@ -15,7 +15,8 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-[999] bg-white h-20 flex justify-center items-center text-[1.2rem]">
-      <div className="max-w-content w-full flex justify-between items-center h-20 mx-auto px-0">
+      {/* Inner container — px-[30px] matches page content padding */}
+      <div className="max-w-content w-full flex justify-between items-center h-20 mx-auto px-[30px]">
 
         {/* Logo */}
         <Link
@@ -49,10 +50,8 @@ export default function Navbar() {
 
         {/* Hamburger button (mobile) */}
         <button
-          id="mobile-menu"
           onClick={() => setMenuOpen(prev => !prev)}
-          className="md:hidden absolute top-[20%] right-[5%] translate-x-[5%] translate-y-[20%]
-                     bg-transparent border-none cursor-pointer"
+          className="md:hidden bg-transparent border-none cursor-pointer p-2"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
@@ -65,22 +64,22 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile dropdown — auto height, no fixed 50vh */}
       <ul
         className={`
           md:hidden absolute w-full bg-white list-none text-center z-[99]
           transition-all duration-500 text-[1.6rem]
           ${menuOpen
-            ? 'top-full opacity-100 h-[50vh]'
-            : 'top-[-1000px] opacity-0 h-[50vh]'}
+            ? 'top-full opacity-100 pointer-events-auto'
+            : 'top-[-1000px] opacity-0 pointer-events-none'}
         `}
       >
         {NAV_LINKS.map(({ label, href }) => (
-          <li key={href} className="w-full">
+          <li key={href} className="w-full border-b border-gray-100 last:border-0">
             <Link
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="text-black no-underline w-full flex items-center justify-center p-8 font-sailors"
+              className="text-black no-underline w-full flex items-center justify-center py-5 font-sailors"
             >
               {label}
             </Link>

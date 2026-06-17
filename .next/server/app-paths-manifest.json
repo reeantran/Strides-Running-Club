@@ -1,0 +1,8 @@
+{
+  "/common-cards/page": "app/common-cards/page.js",
+  "/uncommon-cards/page": "app/uncommon-cards/page.js",
+  "/page": "app/page.js",
+  "/epic-cards/page": "app/epic-cards/page.js",
+  "/schedule/page": "app/schedule/page.js",
+  "/officers/page": "app/officers/page.js"
+}

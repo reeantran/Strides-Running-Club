@@ -26,18 +26,20 @@ export default function HomePage() {
       {/* ── Hero ── */}
       <section
         className="
-          max-w-content w-full mx-auto my-[50px] px-[30px]
-          grid grid-cols-1 md:grid-cols-[1fr_2fr] min-h-[90vh]
+          max-w-content w-full mx-auto px-4
+          my-[30px] md:my-[50px]
+          grid grid-cols-1 md:grid-cols-[1fr_2fr]
+          min-h-[50vh] md:min-h-[90vh]
           opacity-0 translate-y-[50px] animate-slide-up
         "
       >
         {/* Left: headline + CTA */}
-        <div className="homepage-content flex flex-col justify-center md:text-left text-center">
-          <h1 className="font-sailors text-[4rem] md:text-[4rem] text-[2.5rem] mb-6 leading-none">
+        <div className="flex flex-col justify-center md:text-left text-center">
+          <h1 className="font-sailors text-[2.5rem] md:text-[4rem] mb-6 leading-none">
             Strides<br />Running<br />Club
           </h1>
 
-          <a href="#about-us" className="self-start md:self-start self-center">
+          <a href="#about-us" className="self-center md:self-start">
             <button
               className="
                 relative text-[1rem] bg-teal px-[30px] py-[15px] border-none
@@ -56,14 +58,14 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Right: hero image */}
-        <div className="text-center mt-8 md:mt-0">
+        {/* Right: hero image*/}
+        <div className="mt-8 md:mt-0 flex items-center">
           <Image
             src="/images/strides-group.jpg"
             alt="Group Pic"
-            width={900}
-            height={600}
-            className="h-full w-full rounded-[10px] shadow-hero-img object-cover"
+            width={1200}
+            height={800}
+            className="w-full h-auto rounded-[10px] shadow-hero-img"
             priority
           />
         </div>
@@ -73,7 +75,7 @@ export default function HomePage() {
       <section
         id="about-us"
         className="
-          max-w-content w-full mx-auto my-[50px] px-[30px]
+          max-w-content w-full mx-auto my-[30px] px-4
           grid grid-cols-1 sm:grid-cols-2
           opacity-0 translate-y-[50px] animate-slide-up
         "
@@ -81,7 +83,7 @@ export default function HomePage() {
       >
         {ABOUT_SECTIONS.map(({ heading, text }) => (
           <div key={heading}>
-            <h2 className="font-sailors text-[2rem] text-center py-5 px-[30px]">
+            <h2 className="font-sailors text-[2rem] text-center py-5 px-2">
               {heading}
             </h2>
             <p className="text-[1rem] px-10 leading-[1.35] tracking-wide">

@@ -30,13 +30,13 @@ export default function OfficerCard({ name, favoriteRoute, imageSrc, principal =
       </div>
 
       {/* Name */}
-      <h1 className="px-[15px] py-[15px] text-center font-sailors leading-[1.1] break-words
+      <h1 className="py-3 text-center font-sailors leading-[1.1] break-words
                      text-[clamp(1.2rem,2.5vw,1.75rem)]">
         {name}
       </h1>
 
       {/* Favorite route */}
-      <h3 className="px-[10px] pb-[10px] text-center font-sailors leading-[1.2] break-all
+      <h3 className="pb-2 text-center font-sailors leading-[1.2] break-all
                      text-[clamp(0.95rem,1.8vw,1rem)]">
         {favoriteRoute}
       </h3>

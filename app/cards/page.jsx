@@ -11,7 +11,6 @@ const TIERS = [
   { label: 'The Golden Card', href: '/golden-card',     rarity: 'golden' },
 ];
 
-// Maps rarity → Tailwind bg + shadow classes (from tailwind.config.js)
 const RARITY_CLASSES = {
   common:    'bg-rarity-common    shadow-common',
   uncommon:  'bg-rarity-uncommon  shadow-uncommon',
@@ -24,11 +23,10 @@ const RARITY_CLASSES = {
 export default function CardsPage() {
   return (
     <>
-      {/* Intro blurb */}
       <div
         className="
           max-w-content w-full mx-auto block leading-relaxed
-          px-[50px] py-[30px]
+          px-[30px] py-[30px]
           opacity-0 animate-slide-up
         "
       >
@@ -42,15 +40,14 @@ export default function CardsPage() {
         </p>
       </div>
 
-      {/* Tier buttons grid */}
       <div
         className="
-          max-w-content w-full mx-auto my-[20px]
-          grid gap-[30px] px-[50px]
+          max-w-content w-full mx-auto my-[20px] px-[30px]
+          grid gap-[30px]
           opacity-0 animate-slide-up
         "
         style={{
-          gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(360px, 100%), 1fr))',
           animationDelay: '0.1s',
         }}
       >
@@ -65,11 +62,7 @@ export default function CardsPage() {
           >
             <Link
               href={href}
-              className="
-                text-white no-underline font-sailors
-                text-shadow-[0_0_2px_black]
-                hover:scale-110 transition-transform duration-300
-              "
+              className="text-white no-underline font-sailors hover:scale-110 transition-transform duration-300"
               style={{ textShadow: '0 0 2px black' }}
             >
               {label}
