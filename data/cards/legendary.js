@@ -51,6 +51,6 @@ export const legendaryCards = [
     mapUrl: 'https://onthegomap.com/s/cet2j3ft',
     artCredit: 'AC: Mary Helmreich',
     description:
-      'For existential crises only. Or with friends (the current group record is 21 people). Either way, this route is the holy grail, and you\'ll remember this run for a lifetime. Take the trolley back!',
+      'For existential crises only. Or with friends (the current group record is 32 people). Either way, this route is the holy grail, and you\'ll remember this run for a lifetime. Take the trolley back!',
   },
 ];
