@@ -45,9 +45,9 @@ export const rareCards = [
       'Head up Torrey Pines, but continue up the bike trail to explore a short trail loop! Named after the naturalist whose work founded the Torrey Pines St. Reserve, this trail is nothing short of incredible.',
   },
   {
-    name: 'Peñasquitos',
-    cardImage: '/images/cards/peñasquitos.webp',
-    mapImage: '/images/maps/peñasquitos.webp',
+    name: 'Penasquitos',
+    cardImage: '/images/cards/penasquitos.webp',
+    mapImage: '/images/maps/penasquitos.webp',
     mapUrl: 'https://onthegomap.com/s/e83almlo',
     artCredit: 'AC: Mary Helmreich',
     description:
