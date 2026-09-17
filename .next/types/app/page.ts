@@ -1,4 +1,4 @@
-// File: C:\Users\reean\OneDrive\Desktop\strides-website\app\page.jsx
+// File: C:\Users\reean\OneDrive\Documents\GitHub\Strides-Running-Club\app\page.jsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
