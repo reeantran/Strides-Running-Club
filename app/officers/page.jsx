@@ -17,7 +17,7 @@ export default function OfficersPage() {
         "
       >
         <h1 className="font-sailors text-[2rem]">
-          Meet Your 2025-26 Officers and find out their favorite route!
+          Meet Your 2026-27 Officers and find out their favorite route!
         </h1>
       </div>
 
@@ -25,7 +25,7 @@ export default function OfficersPage() {
       <div
         className="
           max-w-content w-full mx-auto my-[50px] px-[30px]
-          grid gap-0
+          grid gap-[0.6rem]
           opacity-0 animate-slide-up
         "
         style={{

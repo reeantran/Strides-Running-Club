@@ -19,6 +19,10 @@ export default function SchedulePage() {
         <h1 className="font-sailors text-[2rem]">
           Here's our weekly Officer schedule!
         </h1>
+
+        <p className="text-[1rem] leading-relaxed">
+          *On Saturday, we only have one official mileage group, but commonly host unofficial longer runs over 6 miles.
+        </p>
       </div>
 
       {/* Tabs + day content */}

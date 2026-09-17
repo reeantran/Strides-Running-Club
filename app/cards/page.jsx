@@ -25,8 +25,10 @@ export default function CardsPage() {
     <>
       <div
         className="
-          max-w-content w-full mx-auto block leading-relaxed
-          px-[30px] py-[30px]
+          max-w-content w-full mx-auto
+          px-[30px] pt-[4rem] pb-[2rem]
+          border-b border-dashed border-black
+          leading-[1.5]
           opacity-0 animate-slide-up
         "
       >
@@ -43,7 +45,7 @@ export default function CardsPage() {
       <div
         className="
           max-w-content w-full mx-auto my-[20px] px-[30px]
-          grid gap-[30px]
+          grid gap-[1rem]
           opacity-0 animate-slide-up
         "
         style={{

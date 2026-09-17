@@ -11,49 +11,47 @@ export const schedule = {
   monday: {
     time: '4:00 PM',
     groups: [
-      { label: 'Low Mileage',    distance: '~2 miles', front: 'Jessica', back: 'Sam'      },
-      { label: 'Middle Mileage', distance: '~4 miles', front: 'Diego',   back: 'Anica'    },
-      { label: 'High Mileage',   distance: '~6 miles', front: 'Ryan',    back: 'Jonathan' },
+      { label: 'Low Mileage', distance: '~2 miles', front: 'Emily', back: 'Ellie' },
+      { label: 'Middle Mileage', distance: '~4 miles', front: 'Alex', back: 'Anica' },
+      { label: 'High Mileage', distance: '~6 miles', front: '', back: '' },
     ],
   },
   tuesday: {
     time: '4:00 PM',
     groups: [
-      { label: 'Low Mileage',    distance: '~2 miles', front: 'Liam',  back: 'Richard' },
-      { label: 'Middle Mileage', distance: '~4 miles', front: 'Colm',  back: 'Elaina'  },
-      { label: 'High Mileage',   distance: '~6 miles', front: 'Alex',  back: 'Owen'    },
+      { label: 'Low Mileage', distance: '~2 miles', front: 'Mattie', back: 'Audrey' },
+      { label: 'Middle Mileage', distance: '~4 miles', front: 'Ernesto', back: 'Jane' },
+      { label: 'High Mileage', distance: '~6 miles', front: 'Terran', back: 'Ellie' },
     ],
   },
   wednesday: {
     time: '4:00 PM',
     groups: [
-      { label: 'Low Mileage',    distance: '~2 miles', front: 'Mattie',   back: 'Naomi'    },
-      { label: 'Middle Mileage', distance: '~4 miles', front: 'Gray',     back: 'Anica'    },
-      { label: 'High Mileage',   distance: '~6 miles', front: 'Dean',     back: 'Jacintha' },
+      { label: 'Low Mileage', distance: '~2 miles', front: 'Colm', back: 'Naomi' },
+      { label: 'Middle Mileage', distance: '~4 miles', front: 'Gray', back: 'Samuel' },
+      { label: 'High Mileage', distance: '~6 miles', front: 'Liam', back: 'Cintha' },
     ],
   },
   thursday: {
     time: '4:00 PM',
     groups: [
-      { label: 'Low Mileage',    distance: '~2 miles', front: 'Emily',   back: 'Ellie'   },
-      { label: 'Middle Mileage', distance: '~4 miles', front: 'Ernesto', back: 'Jane'    },
-      { label: 'High Mileage',   distance: '~6 miles', front: 'Magaly',  back: 'Phillip' },
+      { label: 'Low Mileage', distance: '~2 miles', front: '', back: 'Hannah' },
+      { label: 'Middle Mileage', distance: '~4 miles', front: 'Noah', back: 'Magaly' },
+      { label: 'High Mileage', distance: '~6 miles', front: 'Liam', back: 'Owen' },
     ],
   },
   friday: {
     time: '4:00 PM',
     groups: [
-      { label: 'Low Mileage',    distance: '~2 miles', front: 'Abby',   back: 'Miguel' },
-      { label: 'Middle Mileage', distance: '~4 miles', front: 'Aileen', back: 'Noah'   },
-      { label: 'High Mileage',   distance: '~6 miles', front: 'Ben',    back: 'Sergio' },
+      { label: 'Low Mileage', distance: '~2 miles', front: 'Richard', back: 'Amara' },
+      { label: 'Middle Mileage', distance: '~4 miles', front: 'Diego', back: 'Abby' },
+      { label: 'High Mileage',distance: '~6 miles', front: 'Ryan', back: 'Sergio' },
     ],
   },
   saturday: {
     time: '9:00 AM',
     groups: [
-      { label: 'Low Mileage',    distance: '~2 miles', front: 'Joachim', back: 'Hannah'  },
-      { label: 'Middle Mileage', distance: '~4 miles', front: 'Roxanna', back: 'Amara'   },
-      { label: 'High Mileage',   distance: '~6 miles', front: 'Dean',    back: 'Phillip' },
+      { label: 'Middle Mileage', distance: '~4 miles', front: 'Liam', back: 'Miguel' },
     ],
   },
 };
