@@ -1,22 +1,23 @@
 import Image from 'next/image';
 
-export default function OfficerCard({ name, favoriteRoute, imageSrc, principal = false }) {
+export default function OfficerCard({ name, favoriteRoute, imageSrc}) {
   return (
     // mx/my here are the gaps between cards, not page-level padding
     <div
       className={`
         rounded-[10px] mx-[30px] my-[30px] flex flex-col items-center justify-self-center
-        bg-officer-card shadow-officer overflow-hidden relative
-        border-4 ${principal ? 'border-officer-border' : 'border-white'}
+        bg-officer-card shadow-officer overflow-hidden relative fill
+        border-4 'border-white'
       `}
     >
-      <div className="overflow-hidden w-full">
+      <div className="relative w-full aspect-[3/4] overflow-hidden">
         <Image
           src={imageSrc}
           alt={name}
           width={300}
           height={300}
-          className="w-full h-full object-cover object-top"
+          loading='lazy'
+          className="object-cover object-top"
         />
       </div>
 

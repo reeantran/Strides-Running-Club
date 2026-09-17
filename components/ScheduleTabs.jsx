@@ -27,13 +27,15 @@ function OfficerSlot({ name, position }) {
     <div className="text-center">
       <h4 className="font-sailors py-2">{name}</h4>
       {imgSrc && (
+        <div className="relative w-full aspect-[3/4] overflow-hidden">
         <Image
           src={imgSrc}
           alt={name}
           width={200}
           height={200}
-          className="w-full border border-black"
+          className="w-full border border-black object-cover object-top"
         />
+        </div>
       )}
       <h4 className="font-sailors py-2">{position}</h4>
     </div>
@@ -53,6 +55,7 @@ function MileageGroup({ label, distance, front, back }) {
   );
 }
 
+
 function DayContent({ day }) {
   return (
     <div
@@ -63,8 +66,9 @@ function DayContent({ day }) {
       "
     >
       <div
-        className="grid gap-[15px] text-center"
-        style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}
+        className={`grid grid-cols-1 sm:grid-cols-3 gap-[15px] text-center ${
+          day.groups.length === 1 ? 'sm:[&>div]:col-start-2' : ''
+        }`}
       >
         {day.groups.map((group) => (
           <MileageGroup key={group.label} {...group} />
@@ -112,7 +116,11 @@ export default function ScheduleTabs({ scheduleData }) {
       </div>
 
       {scheduleData[activeDay] && (
-        <DayContent key={activeDay} day={scheduleData[activeDay]} />
+        <DayContent
+          key={activeDay}
+          day={scheduleData[activeDay]}
+          dayName={activeDay}
+        />
       )}
     </div>
   );
